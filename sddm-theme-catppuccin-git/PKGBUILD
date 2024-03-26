@@ -4,6 +4,7 @@ _pkgname=sddm-theme-catppuccin
 pkgname="$_pkgname-git"
 pkgver=v1.0.0.r0.ga487ae2
 pkgrel=1
+pkgdesc='Soothing pastel theme for SDDM'
 
 arch=('any')
 url='https://github.com/catppuccin/sddm'
