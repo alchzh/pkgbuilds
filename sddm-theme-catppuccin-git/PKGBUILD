@@ -2,7 +2,7 @@
 
 _pkgname=sddm-theme-catppuccin
 pkgname="$_pkgname-git"
-pkgver=v1.0.0.r0.ga487ae2
+pkgver=1.0.0.r0.ga487ae2
 pkgrel=1
 pkgdesc='Soothing pastel theme for SDDM'
 
@@ -20,6 +20,7 @@ makedepends=(
   'just'
 )
 provides=("$_pkgname")
+conflicts=("$_pkgname")
 
 source=("$_pkgname::git+$url.git")
 sha256sums=('SKIP')
@@ -35,7 +36,7 @@ backup=($(printf 'usr/share/sddm/themes/%s/theme.conf ' "${_themes[@]}"))
 
 pkgver() {
   cd "$_pkgname"
-  git describe --long --abbrev=7 | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+  git describe --long --abbrev=7 | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 build() {

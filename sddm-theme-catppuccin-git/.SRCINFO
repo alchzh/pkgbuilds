@@ -1,6 +1,6 @@
 pkgbase = sddm-theme-catppuccin-git
 	pkgdesc = Soothing pastel theme for SDDM
-	pkgver = v1.0.0.r0.ga487ae2
+	pkgver = 1.0.0.r0.ga487ae2
 	pkgrel = 1
 	url = https://github.com/catppuccin/sddm
 	arch = any
@@ -11,6 +11,7 @@ pkgbase = sddm-theme-catppuccin-git
 	depends = qt6-svg
 	depends = qt6-declarative
 	provides = sddm-theme-catppuccin
+	conflicts = sddm-theme-catppuccin
 	backup = usr/share/sddm/themes/catppuccin-latte/theme.conf
 	backup = usr/share/sddm/themes/catppuccin-frappe/theme.conf
 	backup = usr/share/sddm/themes/catppuccin-macchiato/theme.conf
