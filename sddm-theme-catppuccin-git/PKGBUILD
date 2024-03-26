@@ -46,9 +46,10 @@ build() {
 package() {
   cd "$_pkgname"
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
-  
-  install -dm755 "$pkgdir/usr/share/sddm/themes"
+
   cd dist
-  cp -R "${_themes[@]}" "$pkgdir/usr/share/sddm/themes"
+  for theme in "${_themes[@]}"; do
+    find ./$theme -type f -exec install -Dm644 {} "$pkgdir/usr/share/sddm/themes/{}" \;
+  done
 }
 
