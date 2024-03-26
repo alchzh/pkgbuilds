@@ -19,7 +19,7 @@ makedepends=(
   'git'
   'just'
 )
-provides=("$pkgname")
+provides=("$_pkgname")
 
 source=("$_pkgname::git+$url.git")
 sha256sums=('SKIP')
