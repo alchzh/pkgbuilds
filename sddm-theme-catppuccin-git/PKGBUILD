@@ -12,8 +12,8 @@ license=('MIT')
 
 depends=(
   'sddm'
-  'qt5-svg'
-  'qt5-quickcontrols2'
+  'qt6-svg'
+  'qt6-declarative'
 )
 makedepends=(
   'git'
